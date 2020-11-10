@@ -17,7 +17,7 @@ class Song
   end
 
   def self.new_by_name(song_name)
-    song = self.new
+    song = self.create
     song.name = song_name
     song
   end
@@ -57,7 +57,7 @@ class Song
     new_file = filename.split(" - ")
     artist_name = new_file[0]
     song_name = new_file[1].gsub(".mp3","")
-    song = self.create
+    song = self.new
     song.name = song_name
     song.artist_name = artist_name
     song
